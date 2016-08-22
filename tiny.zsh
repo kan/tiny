@@ -1,6 +1,6 @@
 prompt_tiny_precmd () {
     vcs_info
-    PROMPT=" %(?.%{${fg[green]}%}.%{${fg[red]}%})-> %{${fg[cyan]}%}%1~ $vcs_info_msg_0_ %{${reset_color}%}"
+    PROMPT=" %(?.%F{47}.%F{197})-> %F{75}%1~ $vcs_info_msg_0_ %f"
 }
 
 prompt_tiny_setup () {
@@ -13,9 +13,9 @@ prompt_tiny_setup () {
 
     zstyle ':vcs_info:*' max-exports 2
     zstyle ':vcs_info:*' enable git hg
-    zstyle ':vcs_info:*' formats "%F{blue}%s:(%F{yellow}%b%F{blue})"
+    zstyle ':vcs_info:*' formats "%F{27}%s:(%F{221}%b%F{27})"
 
-    PROMPT=" %(?.%{${fg[green]}%}.%{${fg[red]}%})-> %{${fg[cyan]}%}%1~ %{${reset_color}%}"
+    PROMPT=" %(?.%F{47}.%F{197})-> %F{75}%}%1~ %f"
 }
 
 prompt_tiny_setup "$@"
